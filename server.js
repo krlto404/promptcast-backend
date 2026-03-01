@@ -50,7 +50,7 @@ app.post('/api/generate-script', episodeLimiter, async (req, res) => {
   const speakerNames = speakers.map(s => s.name).join(', ');
   try {
     const result = await ai.models.generateContent({
-      model:'gemini-2.0-flash-lite',
+      model:'gemini-2.5-flash-preview-04-17',
       contents: `Tu es un producteur de podcasts. Genere un script en 
 "${language}". Duree: ${targetMinutes} minutes. Sujet: ${prompt}. 
 Intervenants: ${speakerNames}. Format strict: NOM: Texte. Commence 
